@@ -1,0 +1,8 @@
+generator:
+  arch: efficientnet_b1
+  norm_layer_type: instance
+
+discriminator:
+  type: double_gan
+  n_layers: 3
+  norm_layer_type: instance
