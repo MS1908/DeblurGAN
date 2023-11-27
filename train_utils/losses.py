@@ -184,7 +184,7 @@ def loss_factory(content_loss_type='perceptual', disc_loss_type='ragan-ls', devi
     if content_loss_type == 'perceptual':
         content_loss = PerceptualLoss(criterion=nn.MSELoss(), device=device)
     elif content_loss_type == 'l1':
-        content_loss = SimpleLoss(criterion=nn.L1Loss(), device=None)
+        content_loss = SimpleLoss(criterion=nn.L1Loss())
     else:
         raise NotImplementedError(f"Content loss {content_loss_type} not implemented.")
 

@@ -1,8 +1,12 @@
 generator:
-  arch: efficientnet_b1
+  arch: inception_resnet_v2
   norm_layer_type: instance
 
 discriminator:
   type: double_gan
   n_layers: 3
   norm_layer_type: instance
+
+loss:
+  content_loss_type: perceptual
+  disc_loss_type: ragan-ls
